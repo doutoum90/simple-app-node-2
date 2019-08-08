@@ -32,11 +32,10 @@ router.post('/login', async (req, res) => {
 
         if (!validPass) return res.status(400).send('incorrect password');
 
-    
-        jwt.sign({ id: existedUser.id,  }, process.env.SECRET_KEY, (err, token) => {
+        jwt.sign({ id: existedUser.id }, process.env.SECRET_KEY, (err, token) => {
             res.json({
                 user: existedUser,
-                token
+                token: token
             })
         });
     } catch (err) {

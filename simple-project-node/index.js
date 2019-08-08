@@ -29,8 +29,8 @@ app.use('/api/user', authroute);
 app.use('/api/posts', postsRoutes);
 
 app.listen(1245, () => {
-    console.log(`Server started on port 1245 ${process.env.POSTGRES_PASSWORD}`)
+    console.log('Server Api bien demarée sur le port 1245');
     db.sequelize.sync().then(() => {
-        console.log('base de données bien demarée')
+        console.log('Server de base de données bien demarée sur le port 15432');
     });
 });

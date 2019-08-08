@@ -7,11 +7,7 @@ services:
     container_name: simple-project-node
     command: bash -c "npm i && npm start" 
     environment:
-      SEQ_DB: doutoumdb
-      SEQ_USER: doutoum
-      SEQ_PW: doutoum
-      PORT: 1245
-      DATABASE_URL: postgres://doutoum:doutoum@db:5432/doutoumdb
+      SECRET_KEY: cle-secrete
     depends_on: 
       - db 
     volumes: 
