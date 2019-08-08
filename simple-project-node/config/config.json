@@ -6,7 +6,7 @@
     "host": "db",
     "dialect": "postgres",
     "operatorsAliases": "false",
-    "port": 15432
+    "port": 5432
   },
   "test": {
     "username": "doutoum",
@@ -15,7 +15,7 @@
     "host": "db",
     "dialect": "postgres",
     "operatorsAliases": "false",
-    "port": 15432
+    "port": 5432
   },
   "production": {
     "username": "doutoum",
@@ -24,6 +24,6 @@
     "host": "db",
     "dialect": "postgres",
     "operatorsAliases": "false",
-    "port": 15432
+    "port": 5432
   }
 }

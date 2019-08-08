@@ -26,16 +26,12 @@ services:
         env: prod      
     ports:
       - "80:80"
-
   db:
-    image: postgres
-    restart: always
+    image: postgres:latest
     container_name: simple-project-database
-    environment: 
-       POSTGRES_USER: doutoum
-       POSTGRES_PASSWORD: doutoum
-       POSTGRES_DB: doutoumdb
-    volumes: 
-      - ./pgdata:/var/lib/postgresql/data
-    ports: 
-      - "15432:5432"
+    ports:
+      - 15432:5432
+    environment:
+      - POSTGRES_USER=doutoum
+      - POSTGRES_PASSWORD=doutoum
+      - POSTGRES_DB=doutoumdb
