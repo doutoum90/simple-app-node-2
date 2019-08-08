@@ -1,0 +1,29 @@
+{
+  "development": {
+    "username": "doutoum",
+    "password": "doutoum",
+    "database": "doutoumdb",
+    "host": "db",
+    "dialect": "postgres",
+    "operatorsAliases": "false",
+    "port": 15432
+  },
+  "test": {
+    "username": "doutoum",
+    "password": "doutoum",
+    "database": "doutoumdb",
+    "host": "db",
+    "dialect": "postgres",
+    "operatorsAliases": "false",
+    "port": 15432
+  },
+  "production": {
+    "username": "doutoum",
+    "password": "doutoum",
+    "database": "doutoumdb",
+    "host": "db",
+    "dialect": "postgres",
+    "operatorsAliases": "false",
+    "port": 15432
+  }
+}

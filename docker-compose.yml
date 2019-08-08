@@ -1,0 +1,41 @@
+version: "3.7"
+services: 
+  api:
+    build: 
+      context: simple-project-node
+      dockerfile: Dockerfile 
+    container_name: simple-project-node
+    command: bash -c "npm i && npm start" 
+    environment:
+      SEQ_DB: doutoumdb
+      SEQ_USER: doutoum
+      SEQ_PW: doutoum
+      PORT: 1245
+      DATABASE_URL: postgres://doutoum:doutoum@db:5432/doutoumdb
+    depends_on: 
+      - db 
+    volumes: 
+      - ./simple-project-node/temp:/usr/src/simple-project-node
+    ports: 
+      - "1245:1245"
+  front:
+    build: 
+      context: simple-project-angular
+      dockerfile: Dockerfile 
+      args:
+        env: prod      
+    ports:
+      - "80:80"
+
+  db:
+    image: postgres
+    restart: always
+    container_name: simple-project-database
+    environment: 
+       POSTGRES_USER: doutoum
+       POSTGRES_PASSWORD: doutoum
+       POSTGRES_DB: doutoumdb
+    volumes: 
+      - ./pgdata:/var/lib/postgresql/data
+    ports: 
+      - "15432:5432"

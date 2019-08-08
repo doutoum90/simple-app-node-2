@@ -1,0 +1,9 @@
+{
+    "username": "doutoum",
+    "password": "doutoum",
+    "database": "doutoumdb",
+    "host": "localhost",
+    "dialect": "postgres",
+    "operatorsAliases": "false",
+    "port": 15432
+}
