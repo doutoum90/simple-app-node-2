@@ -4,6 +4,7 @@ const bcrypt = require('bcryptjs');
 const process = require('process');
 const jwt = require('jsonwebtoken');
 
+
 router.post('/register', async (req, res) => {
 
     try {
@@ -22,7 +23,7 @@ router.post('/register', async (req, res) => {
 
 });
 
-router.post('/login', async (req, res) => {
+ router.post('/login', async (req, res) => {
     try {
         const data = req.body;
         const existedUser = await db.user.findOne({ login: data.login });
@@ -32,7 +33,7 @@ router.post('/login', async (req, res) => {
 
         if (!validPass) return res.status(400).send('incorrect password');
 
-        jwt.sign({ id: existedUser.id }, process.env.SECRET_KEY, (err, token) => {
+        jwt.sign({ id: existedUser.id }, 'gheeghgherghheh', (err, token) => {
             res.json({
                 user: existedUser,
                 token: token

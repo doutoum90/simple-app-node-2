@@ -25,7 +25,9 @@ app.use(function (req, res, next) {
 
 const authroute = require('./routes/auth');
 const postsRoutes = require('./routes/posts');
+// const passportAuth = require('./routes/auth-bis');
 app.use('/api/user', authroute);
+// app.use('/api/passport', passportAuth);
 app.use('/api/posts', postsRoutes);
 
 app.listen(1245, () => {
