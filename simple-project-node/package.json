@@ -30,7 +30,7 @@
     "pg-hstore": "^2.3.3",
     "process": "^0.11.10",
     "pug": "^2.0.4",
-    "sequelize": "^5.12.3",
+    "sequelize": "^5.15.1",
     "typescript": "^3.5.3"
   }
 }
